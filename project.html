@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects | Rusheel Vijay Sable</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/components/base.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/hero.css" />
+    <link rel="stylesheet" href="css/components/music-player.css" />
+    <link rel="stylesheet" href="css/components/sections.css" />
+    <link rel="stylesheet" href="css/components/about.css" />
+    <link rel="stylesheet" href="css/components/skills.css" />
+    <link rel="stylesheet" href="css/components/projects.css" />
+    <link rel="stylesheet" href="css/components/blog.css" />
+    <link rel="stylesheet" href="css/components/experience.css" />
+    <link rel="stylesheet" href="css/components/contact.css" />
+    <link rel="stylesheet" href="css/components/animations.css" />
+    <link rel="stylesheet" href="css/components/awards.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/wakatime.css" />
+    <link rel="stylesheet" href="css/components/featured-projects.css" />
+    <link rel="stylesheet" href="css/components/interactive-skills.css" />
+    <link rel="stylesheet" href="css/components/theme.css" />
+    <link rel="stylesheet" href="css/projects-page.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="scroll-progress-bar"></div>
+
+    <header class="main-header">
+        <a class="logo" href="index.html"><span>rusheel</span>0807</a>
+        <div class="header-navigation">
+            <nav class="main-nav">
+                <a href="index.html#hero">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="project.html" class="is-active">Projects</a> <a href="index.html#experience">Experience</a>
+                <a href="index.html#blog">Blog</a>
+                <a href="index.html#contact">Contact</a>
+                <span class="nav-indicator"></span>
+            </nav>
+            <a href="assets/resume.pdf" class="resume-button" >Resume</a>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+    <div class="music-player-widget">
+        <img src="assets/song-cover.png" alt="Song Cover" class="song-cover" id="song-cover">
+        <div class="song-info">
+            <h4 id="song-title">Điều chưa nói</h4>
+            <p id="song-artist">Tia ft. OMIXX</p>
+        </div>
+        <div class="player-controls">
+            <i class="fas fa-backward-step" id="prev-btn"></i>
+            <i class="fas fa-pause" id="play-pause-btn"></i> <i class="fas fa-forward-step" id="next-btn"></i>
+        </div>
+        <i class="fas fa-volume-high"></i> </div>
+
+    <main class="page-wrapper">
+        <section id="projects" class="content-section">
+            <div class="section-header animate-on-scroll">
+                <div class="section-badge">All My Works</div>
+                <h2 class="section-title">My Projects</h2>
+                <div class="title-underline"></div>
+
+                <a href="index.html" class="back-to-home-btn animate-on-scroll">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+
+            <div class="container">
+
+                <h2 class="section-divider animate-on-scroll">Generative AI & Real-Time Systems</h2>
+
+
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Adaptive GenAI Agent</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>GEN-AI QUIZ<br>PLATFORM</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Real-time multiplayer system using Redis Pub/Sub & WebSockets.</li>
+                                    <li>Dynamic quiz generation via LLM (Mistral 7B) based on player skills.</li>
+                                    <li>Adaptive difficulty engine that learns from user performance.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-genai.jpg" alt="Adaptive Learning Agent Interface" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Adaptive Learning Agent</h2>
+                        <p class="project-category">GenAI, Full-Stack, Real-Time System</p>
+                        <div class="project-tags">
+                            <span>FastAPI</span><span>Docker</span><span>Redis</span><span>Python</span><span>Mistral 7B</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A complete Generative AI adaptive learning platform. Features a dual-path architecture (Hot/Cold storage) to deliver real-time quizzes that adapt difficulty on the fly, acting as a true AI tutor.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-showcase-grid layout-reversed animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Enterprise AI Chatbot</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>DEEPSEEK LLM<br>CHATBOT</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Full-stack architecture with React.js frontend and Flask/Python backend.</li>
+                                    <li>Implemented voice-to-chat feature for optimized user interaction.</li>
+                                    <li>Successfully deployed and utilized as a collection officer chatbot in a real-world setting.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-chatbot.jpg" alt="DeepSeekLLM Chatbot Interface" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>DeepSeekLLM-Chatbot</h2>
+                        <p class="project-category">GenAI, Full-Stack, Web</p>
+                        <div class="project-tags">
+                            <span>React.js</span><span>Flask</span><span>Python</span><span>DeepSeek LLM</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>An intelligent, real-time conversational AI chatbot integrated with the DeepSeek LLM. Showcasing seamless Flask-React integration and deployment-ready architecture for specialized business use.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2 class="section-divider animate-on-scroll">Health Tech & Deep Learning for Diagnosis</h2>
+
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Health AI</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>BONE FRACTURE<br>DETECTION</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Automated classification of bone fractures from X-ray images.</li>
+                                    <li>Utilized Xception architecture for transfer learning and optimization.</li>
+                                    <li>High accuracy achieved through extensive data preprocessing and hyperparameter tuning.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-xray.jpg" alt="Bone Fracture Detection X-ray" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Bone Fracture Detection</h2>
+                        <p class="project-category">Deep Learning, Health Tech, Xception</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>TensorFlow</span><span>Keras</span><span>Xception</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>An automated system for detecting and classifying bone fractures from X-ray images, demonstrating the feasibility of AI-assisted diagnosis to reduce human error and speed up treatment.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-showcase-grid layout-reversed animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Health AI</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>ALZHEIMER’S<br>DETECTION</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Early-stage detection of Alzheimer's using MRI image classification.</li>
+                                    <li>Implemented Transfer Learning with InceptionV3 architecture.</li>
+                                    <li>Used SMOTE and data augmentation to address class imbalance and improve classification.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-mri.jpg" alt="Alzheimer’s Detection MRI" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Alzheimer’s Detection</h2>
+                        <p class="project-category">Deep Learning, Medical Imaging, InceptionV3</p>
+                        <div class="project-tags">
+                            <span>TensorFlow</span><span>Keras</span><span>InceptionV3</span><span>IJCRT</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>Deep learning solution for early-stage Alzheimer’s detection using MRI scans. Demonstrated strengthened research identity by co-authoring a paper published in IJCRT based on the project outcomes.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Research Paper"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-divider animate-on-scroll">Applied Computer Vision & ML</h2>
+
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Computer Vision</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>CYPHERGAZE<br>EMOTION DETECTOR</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Real-time emotion detection from webcam feed using ONNX Runtime.</li>
+                                    <li>Custom futuristic, glitch-style Head-Up Display (HUD) overlay rendering.</li>
+                                    <li>Interactive controls for adjusting smoothing, bounding box speed, and DL backend.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-neurohud.jpg" alt="CypherGaze: NeuroHUD Interface" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>CypherGaze: NeuroHUD</h2>
+                        <p class="project-category">Computer Vision, Real-Time AI, Python</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>OpenCV</span><span>ONNX</span><span>DeepFace</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>An AI-powered application that analyzes facial expressions in real-time and displays the detected emotion within a custom, stylish cyberpunk HUD overlay. Demonstrates proficiency in computer vision and real-time rendering.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-showcase-grid layout-reversed animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Automation & AI</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>SMART ATTENDANCE<br>FACIAL RECOGNITION</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Automated contactless attendance using real-time face recognition.</li>
+                                    <li>Integrated live video feed with SQL database for logging attendance records.</li>
+                                    <li>Co-authored a research paper published in JETIR based on the system's pipeline.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-attendance.jpg" alt="Facial Recognition Attendance" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Attendance System</h2>
+                        <p class="project-category">Computer Vision, Automation, Research</p>
+                        <div class="project-tags">
+                            <span>OpenCV</span><span>Python</span><span>SQL</span><span>JETIR</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A successful solution to eliminate manual roll calls by automating classroom attendance via real-time deep learning-based face recognition, proving scalability for large institutions.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Research Paper"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Data Science</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>IPL WIN<br>PREDICTOR</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Machine Learning model to predict IPL match outcomes based on historical data.</li>
+                                    <li>Conducted extensive feature engineering (team strength, venue factors, toss impact).</li>
+                                    <li>Utilized Linear Regression and Random Forest models with robust cross-validation.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-ipl.jpg" alt="IPL Win Predictor Dashboard" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>IPL Win Predictor</h2>
+                        <p class="project-category">Machine Learning, Sports Analytics</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Random Forest</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>An end-to-end Machine Learning pipeline developed to quantify match-winning factors in the IPL, providing actionable insights useful for sports analysts, broadcasters, and team strategists.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-showcase-grid layout-reversed animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Full-Stack Web</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>ONLINE FOOD<br>ORDERING SYSTEM</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Full-stack food ordering platform for local restaurants.</li>
+                                    <li>Core functionalities: ordering, cart management, and checkout.</li>
+                                    <li>Designed and connected database models for users, menu, and orders using MySQL.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-foms.jpg" alt="Online Food Ordering System" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Online Food Ordering System</h2>
+                        <p class="project-category">Web, E-commerce, Full-stack</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A fundamental full-stack web application built to provide local restaurants with a reliable digital system for managing online orders, providing a solid foundation in web development.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        </main>
+
+<footer class="main-footer">
+    <div class="container footer-container">
+        <div class="footer-column footer-about">
+            <h3 class="footer-logo"><span>rusheel</span>0807</h3>
+            <p>A passionate Software Developer dedicated to building beautiful and useful applications.</p>
+        </div>
+
+        <div class="footer-column footer-links">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="assets/resume.pdf" download>Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column footer-connect">
+            <h4 class="footer-title">Connect with Me</h4>
+            <ul>
+                <li><a href="https://github.com/rusheel080703" target="_blank"><i class="fab fa-github"></i>
+                        GitHub</a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/rusheel-sable/" target="_blank"><i
+                            class="fab fa-linkedin-in"></i>
+                        LinkedIn</a></li>
+                <li><a href="mailto:rusheelsable@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container">
+            <p>Copyright © <span id="currentYear"></span> Rusheel Sable. All rights reserved.</p>
+            <p>Last updated: <b> November 13th 2025</b></p>
+        </div>
+    </div>
+</footer>
+
+<audio id="audio-source"></audio>
+<script src="js/playlist.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownToggle = document.querySelector('.theme-switcher-dropdown .dropdown-toggle');
+        const dropdownMenu = document.querySelector('.theme-switcher-dropdown .dropdown-menu');
+
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', () => {
+                dropdownMenu.classList.toggle('show');
+            });
+
+            window.addEventListener('click', (event) => {
+                if (!event.target.matches('.dropdown-toggle') && !event.target.matches('.dropdown-toggle i')) {
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }
+            });
+        }
+    });
+</script>
+</body>
+
+</html>

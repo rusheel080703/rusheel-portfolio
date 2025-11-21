@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TIÊU ĐỀ MỚI -->
+    <title>Rusheel Vijay Sable - Software Developer</title>
+    <!-- THAY ICON MỚI (NẾU CÓ) -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- THÊM FONT MỚI TỪ GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- LINK CSS VÀ FONT AWESOME -->
+        <link rel="stylesheet" href="css/components/base.css" />
+    <link rel="stylesheet" href="css/components/header.css" />
+    <link rel="stylesheet" href="css/components/hero.css" />
+    <link rel="stylesheet" href="css/components/music-player.css" />
+    <link rel="stylesheet" href="css/components/sections.css" />
+    <link rel="stylesheet" href="css/components/about.css" />
+    <link rel="stylesheet" href="css/components/skills.css" />
+    <link rel="stylesheet" href="css/components/projects.css" />
+    <link rel="stylesheet" href="css/components/blog.css" />
+    <link rel="stylesheet" href="css/components/experience.css" />
+    <link rel="stylesheet" href="css/components/contact.css" />
+    <link rel="stylesheet" href="css/components/animations.css" />
+    <link rel="stylesheet" href="css/components/awards.css" />
+    <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/components/wakatime.css" />
+    <link rel="stylesheet" href="css/components/featured-projects.css" />
+    <link rel="stylesheet" href="css/components/interactive-skills.css" />
+    <link rel="stylesheet" href="css/components/theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .theme-switcher-dropdown {
+            position: relative;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+
+        .dropdown-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background-color 0.3s, border-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dropdown-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: var(--bg-card);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 0.5rem;
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 0;
+            right: 0;
+            top: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-menu a {
+            color: var(--text-primary);
+            padding: 0.75rem 1rem;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Thanh tiến trình cuộn giữ nguyên -->
+    <div class="scroll-progress-bar"></div>
+
+    <header class="main-header">
+        <!-- Nhóm 1: Logo -->
+        <a class="logo" href="index.html"><span>rusheel</span>0807</a>
+
+        <!-- Nhóm 2: Khối điều hướng -->
+        <div class="header-navigation"> <!-- THÊM THẺ NÀY -->
+            <nav class="main-nav">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <!-- <a href="#coding-activity">Activity</a> -->
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blog</a> <!-- << THÊM DÒNG NÀY VÀO -->
+                <a href="#contact">Contact</a>
+                <span class="nav-indicator"></span>
+            </nav>
+            <a href="download-resume.html" class="resume-button">Resume</a>
+
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <div class="theme-switcher-dropdown">
+                <button class="dropdown-toggle">Themes <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-menu">
+                    <a href="index.html">Default</a>
+                    <a href="birthday.html">Birthday</a>
+                    <a href="noel.html">Noel</a>
+                    <a href="halloween.html">Halloween</a>
+                    <a href="tet.html">Tết</a>
+                </div>
+            </div>
+
+        </div> <!-- THÊM THẺ NÀY -->
+
+    </header>
+
+    <main>
+        <!-- ====================================================== -->
+        <!-- Section 1: Hero (THAY ĐỔI LỚN) -->
+        <!-- ====================================================== -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background"></div>
+            <div class="container hero-container">
+                <!-- Profile Card (bên trái) -->
+                <div class="profile-card-container animate-on-scroll">
+                    <div class="profile-card glass-card">
+                        <div class="profile-header">
+                            <div class="avatar-wrapper">
+                                <img src="assets/my_image1.jpg" alt="Avatar" class="avatar" />
+                                <div class="status-indicator online"></div>
+                            </div>
+                            <div class="profile-info">
+                                <h2>Rusheel Vijay Sable</h2>
+                                <p class="job-title">Software Developer</p>
+                            </div>
+                        </div>
+                        <div class="profile-details">
+                            <p><i class="fas fa-map-marker-alt"></i> Los Angeles, California</p>
+                            <p><i class="fas fa-calendar-alt"></i> Joined 2025</p>
+                            <p><i class="fas fa-briefcase"></i>University of Southern California</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Hero Text Content (ở giữa) -->
+                <div class="hero-text-content">
+                    <div class="welcome-badge animate-on-scroll">Welcome to my Portfolio</div>
+                    <h1 class="animate-on-scroll">
+                        Building Digital<br>
+                        <span class="gradient-text">Experiences</span>
+                    </h1>
+                    <p style="color: white;" class="animate-on-scroll">A passionate Software Engineering student
+                        specializing in creating
+                        efficient, user-centric & AI integrated web applications.</p>
+                    <div class="hero-buttons animate-on-scroll">
+                        <a href="#projects" class="btn btn-primary">View my projects <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+                    </div>
+                    <div class="social-links animate-on-scroll">
+                        <a style="color: white;" href="https://www.linkedin.com/in/rusheel-sable/" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a style="color: white;" href="https://github.com/rusheel080703" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a style="color: white;" href="mailto:rusheelsable@gmail.com" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a style="color: white;" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down-indicator"></div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- Music Player Widget -->
+        <!-- ====================================================== -->
+        <div class="music-player-widget">
+            <img src="assets/song-cover.png" alt="Song Cover" class="song-cover" id="song-cover">
+            <div class="song-info">
+                <h4 id="song-title">Điều chưa nói</h4>
+                <p id="song-artist">Tia ft. OMIXX</p>
+            </div>
+            <div class="player-controls">
+                <!-- Thêm ID cho các nút -->
+                <i class="fas fa-backward-step" id="prev-btn"></i>
+                <i class="fas fa-pause" id="play-pause-btn"></i> <!-- Bắt đầu với icon pause -->
+                <i class="fas fa-forward-step" id="next-btn"></i>
+            </div>
+            <i class="fas fa-volume-high"></i> <!-- Phần volume sẽ làm sau nếu bạn muốn -->
+        </div>
+
+        <!-- ====================================================== -->
+        <!-- Section 2: About Me (CẬP NHẬT) -->
+        <!-- ====================================================== -->
+        <section id="about" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-badge">My personal story</div>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image-wrapper animate-on-scroll">
+                        <img src="assets/my_image.png" alt="A pensive anime character in a snowy city scene">
+                        <div class="status-tag">
+                            <span class="green-dot"></span> Available for work
+                        </div>
+                    </div>
+                    <div class="about-text-content animate-on-scroll">
+                        <p>I'm Rusheel, a Data Scientist and Full-Stack Developer currently pursuing my Master’s in Computer Science at the University of Southern California (USC). With hands-on experience in deep learning, machine learning, data engineering, and full-stack development, I thrive at the intersection of data and scalable software.</p>
+                        <p> With a strong foundation in AI, scalable systems, and end-to-end development, I build intelligent solutions that bridge data-driven insights with real-world applications.</p>
+                        <p>Outside technology, I love running, trekking, traveling, playing Casio, and exploring creative ideas through content creation.</p>
+                        <div class="info-box-wrapper glass-card">
+                            <div class="info-box">
+                                <div>
+                                    <span class="info-label">Name</span>
+                                    <p>Rusheel Vijay Sable
+                                </div>
+                                <div>
+                                    <span class="info-label">Email</span>
+                                    <p>rusheelsable@gmail.com</p>
+                                </div>
+                                <div>
+                                    <span class="info-label">Location</span>
+                                    <p>Los Angeles, California</p>
+                                </div>
+                                <div>
+                                    <span class="info-label">Availability</span>
+                                    <p class="available-status">Open to Internship</p>
+                                </div>
+                            </div>
+                            <a href="download-resume.html" download class="btn-download-resume">Download Resume <i
+                                    class="fas fa-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- Section 3: Skills (CẬP NHẬT) -->
+        <!-- ====================================================== -->
+        <section id="skills" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <!-- Thêm lại badge "My Skills" -->
+                    <div class="section-badge">My Skills</div>
+                    <!-- Đổi tiêu đề -->
+                    <h2 class="section-title">Technical Stack</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="skills-wrapper">
+                    <div class="skills-grid">
+                        <!-- JavaScript sẽ tự động chèn các thanh kỹ năng vào đây -->
+                        <p class="skills-loading">
+                            <i class="fas fa-spinner fa-spin"></i> Loading technical skills...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- Section 4: Experience (ĐÃ CẬP NHẬT CHO BẠN) -->
+        <!-- ====================================================== -->
+<section id="experience" class="content-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-badge">My professional journey</div>
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="experience-grid-layout">
+            
+            <div class="experience-column animate-on-scroll">
+                <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div class="timeline flat-timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Master of Science in Computer Science</h3>
+                            <p class="timeline-meta">University of Southern California | Aug 2025 - May 2027</p>
+                            <p>Pursuing advanced coursework in AI, Machine Learning, and Large Language Models. Focusing on designing scalable software architectures and optimizing deep learning pipelines to solve complex, data-intensive real-world problems.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>B.Tech in Computer Science and Engineering</h3>
+                            <p class="timeline-meta">Vishwanath Karad MIT World Peace University | Dec 2021 - May 2025</p>
+                            <p>Graduated with a strong foundation in Data Structures, Algorithms, & Web Development. Led multiple technical projects involving React and Python, and co-authored research papers on computer vision and deep learning applications.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="experience-column animate-on-scroll">
+                <h3 class="column-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+                <div class="timeline flat-timeline">
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Full Stack / GenAI Intern</h3>
+                            <p class="timeline-meta">MARKYTICS.AI | Jan 2025 – Present</p>
+                            <p>Building AI-integrated web apps (Django, React) and Generative AI solutions. Developed a voice-to-text DeepSeek chatbot and an automated GPT-based PDF extraction tool reducing manual workload by 70%.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-card">
+                            <h3>Data Analyst Intern</h3>
+                            <p class="timeline-meta">MODI INNOVATIONS PVT. LTD. | Jun 2024 – Aug 2024</p>
+                            <p>Designed Power BI dashboards improving reporting efficiency by 40%. Developed ARIMA/SARIMA forecasting models that reduced stockouts by 25% and improved inventory planning accuracy.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <style>
+        .experience-grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .column-title {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.5rem;
+            color: var(--text-primary); /* Uses your theme color */
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .column-title i {
+            color: var(--accent-color); /* Icon color */
+        }
+
+        /* Responsive: Stack columns on mobile */
+        @media (max-width: 768px) {
+            .experience-grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</section>
+
+
+        <!-- ====================================================== -->
+        <!-- Section 5: Featured Works (NEW ALTERNATING LAYOUT) -->
+        <!-- ====================================================== -->
+           
+        <section id="projects" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-badge">Some of my recent work</div>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Adaptive GenAI Agent</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>GEN-AI QUIZ<br>PLATFORM</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Real-time multiplayer system using Redis Pub/Sub & WebSockets.</li>
+                                    <li>Dynamic quiz generation via LLM (Mistral 7B) based on player skills.</li>
+                                    <li>Adaptive difficulty engine that learns from user performance.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-genai.jpg" alt="Adaptive Learning Agent Interface" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Adaptive Learning Agent</h2>
+                        <p class="project-category">GenAI, Full-Stack, Real-Time System</p>
+                        <div class="project-tags">
+                            <span>FastAPI</span><span>Docker</span><span>Redis</span><span>Python</span><span>Mistral 7B</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A complete Generative AI adaptive learning platform. Features a dual-path architecture (Hot/Cold storage) to deliver real-time quizzes that adapt difficulty on the fly, acting as a true AI tutor.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Live Demo"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-showcase-grid layout-reversed animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>Attendance System</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>SMART ATTENDANCE<br>COMPUTER VISION</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Automated contactless attendance using real-time video feeds.</li>
+                                    <li>Deep learning-based face detection and recognition pipeline.</li>
+                                    <li>Centralized SQL database integration for instant record logging.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-attendance.jpg" alt="Face Recognition System" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>Facial Recognition System</h2>
+                        <p class="project-category">AI, Computer Vision, Automation</p>
+                        <div class="project-tags">
+                            <span>OpenCV</span><span>Python</span><span>Deep Learning</span><span>SQL</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A robust automation solution designed to eliminate manual roll calls. It processes live video to identify registered students and logs attendance instantly, ensuring a contactless and error-free process.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Research Paper"><i class="fas fa-file-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-showcase-grid animate-on-scroll">
+                    <div class="showcase-card">
+                        <div class="showcase-header"><span>FOMS Project</span></div>
+                        <div class="showcase-content">
+                            <div class="text-features">
+                                <h1>FOMS<br>DELIVERY APP</h1>
+                                <h4 class="feature-title">FEATURES</h4>
+                                <ul>
+                                    <li>Full-stack platform handling 200+ simulated orders/day.</li>
+                                    <li>Integrated AI-based chat and voice ordering capabilities.</li>
+                                    <li>Optimized database queries reducing latency by 20%.</li>
+                                </ul>
+                            </div>
+                            <div class="image-gallery">
+                                <img src="assets/placeholder-foms.jpg" alt="FOMS Dashboard" class="showcase-img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details-column">
+                        <h2>FOMS Delivery System</h2>
+                        <p class="project-category">Full-Stack Web, Database Optimization</p>
+                        <div class="project-tags">
+                            <span>PHP</span><span>MySQL</span><span>HTML/CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="description-box glass-card">
+                            <p>A comprehensive food delivery platform featuring order management, cart systems, and a highly optimized backend. Includes AI voice features to enhance user accessibility.</p>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="view-all-posts-container animate-on-scroll" style="margin-top: 4rem;">
+                <a href="project.html" class="btn btn-secondary">
+                    View All Projects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+
+<!-- ====================================================== -->
+        <!-- Section 6: Awards & Achievements (UPDATED WITH IMAGE) -->
+        <!-- ====================================================== -->        
+<section id="awards" class="content-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <div class="section-badge">Beyond the Code</div>
+            <h2 class="section-title">Leadership & Extracurriculars</h2>
+            <div class="title-underline"></div>
+        </div>
+
+        <div class="leadership-grid">
+            
+            <div class="award-card glass-card animate-on-scroll">
+                <div class="award-info">
+                    <p class="award-date">Sep 2023 - Nov 2023</p>
+                    <h3 class="award-title"><i class="fas fa-users-cog"></i> Accommodation Lead</h3>
+                    <p class="award-competition">G20 Interfaith Summit 2023</p>
+                    <p class="award-issuer">Pune, India</p>
+                </div>
+                <div class="award-description">
+                    <ul>
+                        <li>Managed hospitality, logistics, and accommodations for 70+ international delegates over a 3-day event.</li>
+                        <li>Led and coordinated a team of 30+ members to ensure seamless event execution and guest experience.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="award-card glass-card animate-on-scroll">
+                <div class="award-info">
+                    <p class="award-date">Aug 2022 - May 2024</p>
+                    <h3 class="award-title"><i class="fas fa-hiking"></i> Club Coordinator</h3>
+                    <p class="award-competition">Adventure Club (NISARGVEDH)</p>
+                    <p class="award-issuer">MIT-WPU, Pune</p>
+                </div>
+                <div class="award-description">
+                    <ul>
+                        <li>Founded the university’s first outdoor activity club and successfully led over 20 interdisciplinary treks.</li>
+                        <li>Managed logistics for 1000+ participants and a core team of 30+, training members in mountaineering and safety.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="award-card glass-card animate-on-scroll">
+                <div class="award-info">
+                    <p class="award-date">May 2023 - June 2023</p>
+                    <h3 class="award-title"><i class="fas fa-hand-holding-heart"></i> Head Volunteer</h3>
+                    <p class="award-competition">Vasantrao Naik Child Orphanage</p>
+                    <p class="award-issuer">Aurangabad, India</p>
+                </div>
+                <div class="award-description">
+                    <ul>
+                        <li>Taught underprivileged children and organized educational activities, fostering a positive learning environment.</li>
+                        <li>Spearheaded fundraising initiatives for community development and education support.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="award-card glass-card animate-on-scroll">
+                <div class="award-info">
+                    <p class="award-date">Jan 2022 - Dec 2022</p>
+                    <h3 class="award-title"><i class="fas fa-futbol"></i> Sports Coordinator</h3>
+                    <p class="award-competition">Youth Interact</p>
+                    <p class="award-issuer">MIT-WPU, Pune</p>
+                </div>
+                <div class="award-description">
+                    <ul>
+                        <li>Organized inter-university football and cricket tournaments, increasing engagement across institutions.</li>
+                        <li>Coordinated logistics, scheduling, and venue preparation for over 100 student participants.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="achievements-wrapper animate-on-scroll" style="margin-top: 2rem;">
+            <div class="award-photo-card glass-card">
+                <h3 class="photo-title"><i class="fas fa-trophy"></i> Key Achievements & Recognitions</h3>
+                <div class="achievements-list">
+                    <div class="achievement-item">
+                        <i class="fas fa-medal"></i>
+                        <div>
+                            <h4>MIT-WPU Merit Scholarship & Hackathon Winner</h4>
+                            <p>Awarded 100% Merit Scholarship for academic excellence and secured 1st place in the Hack-MIT WPU Hackathon.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-item">
+                        <i class="fas fa-mountain"></i>
+                        <div>
+                            <h4>Deo Tibba Base Camp Trek (14,000 ft)</h4>
+                            <p>Successfully conquered high-altitude trekking conditions, demonstrating physical endurance, teamwork, and crisis management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        /* Create a 2-column grid for large screens */
+        @media (min-width: 768px) {
+            .leadership-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .award-title i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        .achievements-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .achievement-item i {
+            font-size: 1.5rem;
+            color: #ffd700; /* Gold color for trophies */
+            margin-top: 4px;
+        }
+
+        .achievement-item h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-primary);
+            font-family: 'Sora', sans-serif;
+        }
+
+        .achievement-item p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</section>
+
+
+
+        <!-- ====================================================== -->
+        <!-- Section 7:  Section Blog -->
+        <!-- ====================================================== -->
+        <section id="blog" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-badge">Sharing my knowledge</div>
+                    <h2 class="section-title">From The Blog (Maintenance)</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <!-- Lưới chứa các bài blog nổi bật -->
+                <div class="blog-grid">
+                    <!-- Bài Blog 1: Mixamo & Unity -->
+                    <div class="blog-post-card glass-card animate-on-scroll">
+                        <a href="post-mixamo-unity.html" class="blog-card-image-link">
+                            <div class="blog-card-image">
+                                <!-- Bạn có thể tạo 1 ảnh thumbnail cho bài viết này -->
+                                <img src="assets/placeholder-600x400.png" alt="A 3D character in Unity editor">
+                            </div>
+                        </a>
+                        <div class="blog-card-content">
+                            <div class="blog-card-tags">
+                                <span>Unity</span><span>Game Dev</span>
+                            </div>
+                            <h3><a href="post-mixamo-unity.html">Guide: Using Mixamo Assets in Unity</a></h3>
+                            <p>A standard workflow to correctly download and implement 3D characters and animations from
+                                Mixamo into your Unity projects.</p>
+                            <a href="post-mixamo-unity.html" class="blog-card-link">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- === BÀI VIẾT MỚI: UNITY & GITHUB PAGES === -->
+                    <div class="blog-post-card glass-card animate-on-scroll">
+                        <a href="post-unity-githubpages.html" class="blog-card-image-link">
+                            <div class="blog-card-image">
+                                <img src="assets/placeholder-600x400.png" alt="Unity logo and GitHub logo">
+                            </div>
+                        </a>
+                        <div class="blog-card-content">
+                            <div class="blog-card-tags">
+                                <span>Unity</span><span>Game Dev</span><span>GitHub</span>
+                            </div>
+                            <h3><a href="post-unity-githubpages.html">Hướng Dẫn: Deploy Game Unity Lên GitHub Pages</a>
+                            </h3>
+                            <p>Quy trình chi tiết để chia sẻ game Unity của bạn lên web miễn phí và cách khắc phục lỗi
+                                không tải được game phổ biến nhất.</p>
+                            <a href="post-unity-githubpages.html" class="blog-card-link">Read More <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Bài Blog 3 (Ví dụ) -->
+                    <div class="blog-post-card glass-card animate-on-scroll">
+                        <a href="#" class="blog-card-image-link">
+                            <div class="blog-card-image">
+                                <img src="assets/placeholder-600x400.png" alt="Docker container logos">
+                            </div>
+                        </a>
+                        <div class="blog-card-content">
+                            <div class="blog-card-tags">
+                                <span>Docker</span><span>DevOps</span>
+                            </div>
+                            <h3><a href="#">Getting Started with Docker for Web Devs</a></h3>
+                            <p>Learn how containerization with Docker can streamline your development workflow, ensuring
+                                consistency across environments.</p>
+                            <a href="#" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nút xem tất cả bài viết -->
+                <div class="view-all-posts-container animate-on-scroll">
+                    <a href="blog.html" class="btn btn-secondary">View All Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================== -->
+        <!-- Section 8: Contact (ĐÃ CẬP NHẬT CHO BẠN) -->
+        <!-- ====================================================== -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <div class="section-badge">Let's work together</div>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info-wrapper glass-card animate-on-scroll">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <a href="mailto:rusheelsable@gmail.com">rusheelsable@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <span>LinkedIn</span>
+                                <a href="https://www.linkedin.com/in/rusheel-sable"
+                                    target="_blank">linkedin.com/in/rusheel-sable</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <span>GitHub</span>
+                                <a href="https://github.com/rusheel080703"
+                                    target="_blank">github.com/rusheel080703</a>
+                            </div>
+                        </div>
+                        <h3 class="status-title">Current Status</h3>
+                        <div class="contact-status">
+                            <span class="green-dot"></span>
+                            Open for Software Developer and GEN-AI Internship opportunities
+                        </div>
+                    </div>
+                    <!-- Form liên hệ - Bạn cần một dịch vụ backend như Formspree để nó hoạt động -->
+                    <form class="contact-form glass-card animate-on-scroll" action="https://formspree.io/f/xpwozknb"
+                        method="POST">
+                        <h3>Send Me a Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message <i
+                                class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ====================================================== -->
+    <!-- Footer (MỚI) -->
+    <!-- ====================================================== -->
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <!-- Cột 1: Giới thiệu -->
+            <div class="footer-column footer-about">
+                <h3 class="footer-logo"><span>rusheel</span>0807</h3>
+                <p>A passionate Software Developer dedicated to building beautiful and useful applications.</p>
+            </div>
+
+            <!-- Cột 2: Quick Links -->
+            <div class="footer-column footer-links">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="download-resume.html" download>Resume</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3: Connect with Me -->
+            <div class="footer-column footer-connect">
+                <h4 class="footer-title">Connect with Me</h4>
+                <ul>
+                    <li><a href="https://github.com/rusheel080703" target="_blank"><i class="fab fa-github"></i>
+                            GitHub</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/rusheel-sable/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i>
+                            LinkedIn</a></li>
+                    <li><a href="mailto:rusheelsable@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dòng Copyright ở dưới cùng -->
+        <div class="footer-copyright">
+            <div class="container">
+                <p>Copyright © <span id="currentYear"></span> Rusheel Sable. All rights reserved.</p>
+                <p>Last updated: <b> November 13th 2025</b></p>
+            </div>  
+        </div>
+    </footer>
+
+    <audio id="audio-source"></audio>
+    <script src="js/playlist.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdownToggle = document.querySelector('.theme-switcher-dropdown .dropdown-toggle');
+            const dropdownMenu = document.querySelector('.theme-switcher-dropdown .dropdown-menu');
+
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', () => {
+                    dropdownMenu.classList.toggle('show');
+                });
+
+                window.addEventListener('click', (event) => {
+                    if (!event.target.matches('.dropdown-toggle') && !event.target.matches('.dropdown-toggle i')) {
+                        if (dropdownMenu.classList.contains('show')) {
+                            dropdownMenu.classList.remove('show');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
