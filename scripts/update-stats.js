@@ -1,41 +1,48 @@
-// Import các module cần thiết của Node.js
+// Import necessary Node.js modules
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
-// Tên người dùng GitHub của bạn
-const GITHUB_USERNAME = 'TranHuuDat2004';
-// Đường dẫn đến tệp JSON đầu ra
+// Your GitHub username
+const GITHUB_USERNAME = 'rusheel080703';
+
+// Path to the output JSON file
 const OUTPUT_PATH = path.join(__dirname, '..', 'github_stats.json');
-// Tùy chọn cho yêu cầu API GitHub
+
+// Options for GitHub API request
 const options = {
     hostname: 'api.github.com',
     path: `/users/${GITHUB_USERNAME}/repos?per_page=100&sort=pushed`,
     method: 'GET',
     headers: {
-        'User-Agent': 'Node.js script', // API GitHub yêu cầu một User-Agent
+        'User-Agent': 'Node.js script', // GitHub API requires a User-Agent header
     }
 };
 
-// Hàm chính để thực hiện công việc
+// Main function to execute the task
 async function fetchAndSaveStats() {
-    console.log('Bắt đầu lấy dữ liệu từ GitHub API...');
+    console.log('Starting data fetch from GitHub API...');
 
-    // Tạo một Promise để xử lý yêu cầu HTTPS
+    // Create a Promise to handle the HTTPS request
     const promise = new Promise((resolve, reject) => {
         const req = https.request(options, (res) => {
             let data = '';
-            // Nhận dữ liệu theo từng đoạn
+            
+            // Receive data in chunks
             res.on('data', (chunk) => {
                 data += chunk;
             });
-            // Khi kết thúc, xử lý toàn bộ dữ liệu
+            
+            // On end, process all the received data
             res.on('end', () => {
                 if (res.statusCode >= 200 && res.statusCode < 300) {
-                    resolve(JSON.parse(data));
+                    try {
+                        resolve(JSON.parse(data));
+                    } catch (e) {
+                        reject(new Error('Failed to parse JSON response from GitHub'));
+                    }
                 } else {
-                    reject(new Error(`Lỗi API GitHub: Trạng thái ${res.statusCode}
-${data}`));
+                    reject(new Error(`GitHub API Error: Status ${res.statusCode}\n${data}`));
                 }
             });
         });
@@ -48,29 +55,35 @@ ${data}`));
     });
 
     try {
-        // Chờ đợi dữ liệu từ API
+        // Wait for data from API
         const repos = await promise;
-        console.log(`Đã tìm thấy ${repos.length} kho lưu trữ.`);
+        
+        if (!Array.isArray(repos)) {
+            throw new Error('API response is not an array of repositories.');
+        }
 
-        // Đếm số lượng ngôn ngữ
+        console.log(`Found ${repos.length} repositories.`);
+
+        // Count language usage
         const langStats = {};
         repos.forEach(repo => {
             if (repo.language) {
+                // If language exists, increment count; otherwise start at 1
                 langStats[repo.language] = (langStats[repo.language] || 0) + 1;
             }
         });
 
-        console.log('Số liệu thống kê ngôn ngữ:', langStats);
+        console.log('Language statistics:', langStats);
 
-        // Ghi dữ liệu vào tệp github_stats.json
+        // Write data to github_stats.json
         fs.writeFileSync(OUTPUT_PATH, JSON.stringify(langStats, null, 2));
-        console.log(`Đã lưu thành công số liệu thống kê vào ${OUTPUT_PATH}`);
+        console.log(`Successfully saved statistics to ${OUTPUT_PATH}`);
 
     } catch (error) {
-        console.error('Đã xảy ra lỗi:', error.message);
-        process.exit(1); // Thoát với mã lỗi
+        console.error('An error occurred:', error.message);
+        process.exit(1); // Exit with error code
     }
 }
 
-// Chạy hàm chính
+// Run the main function
 fetchAndSaveStats();
