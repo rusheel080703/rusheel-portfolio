@@ -1,8 +1,5 @@
-
-
-
-# ⚡ Rusheel Sable | Interactive Portfolio V2
-
+# ⚡ Rusheel Vijay Sable | Interactive Portfolio
+![Portfolio Homepage Preview](assets/home-preview.png)
 ![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
 ![Tech](https://img.shields.io/badge/Stack-Vanilla%20JS%20%7C%20Node.js%20%7C%20GitHub%20Actions-blueviolet?style=for-the-badge)
