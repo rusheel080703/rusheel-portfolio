@@ -747,8 +747,8 @@
                         </div>
                     </div>
                     <!-- Form liên hệ - Bạn cần một dịch vụ backend như Formspree để nó hoạt động -->
-                    <form class="contact-form glass-card animate-on-scroll" action="https://formspree.io/f/xpwozknb"
-                        method="POST">
+                    <form class="contact-form glass-card animate-on-scroll" name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact" />
                         <h3>Send Me a Message</h3>
                         <div class="form-group">
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
