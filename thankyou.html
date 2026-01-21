@@ -3,43 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Sent!</title>
+    <title>Message Sent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
-            background: #0a192f;
-            color: #ccd6f6;
-            font-family: sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            /* Clean Light Background */
+            background-color: #f3f4f6;
+            color: #1f2937;
+            font-family: 'Sora', sans-serif;
             margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 20px;
             text-align: center;
+            max-width: 400px;
+            width: 90%;
+            /* Soft Shadow for "floating" effect */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            animation: slideUp 0.6s ease-out;
         }
-        .container {
-            border: 1px solid #64ffda;
-            padding: 2rem;
-            border-radius: 10px;
-            background: #112240;
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background-color: #d1fae5; /* Very light green bg */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
         }
-        h1 { color: #64ffda; }
-        a {
-            color: #0a192f;
-            background: #64ffda;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+
+        .icon-circle i {
+            font-size: 2rem;
+            color: #10b981; /* Green Checkmark */
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        p {
+            color: #6b7280; /* Gray text */
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .btn {
             display: inline-block;
-            margin-top: 1rem;
+            padding: 12px 30px;
+            background-color: #1f2937; /* Dark button */
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Message Received! 🚀</h1>
-        <p>Thanks for reaching out, Rusheel. I'll check my inbox shortly.</p>
-        <a href="index.html">Back to Portfolio</a>
+    <div class="card">
+        <div class="icon-circle">
+            <i class="fas fa-check"></i>
+        </div>
+        <h1>Got it!</h1>
+        <p>Thanks for the message. 
+            I'll get back to you as soon as possible.</p>
+        <a href="index.html" class="btn">Back to Home</a>
     </div>
 </body>
 </html>
